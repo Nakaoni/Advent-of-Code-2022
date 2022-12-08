@@ -4,7 +4,7 @@
 
 ## Goals
 
-The main goal is to take this opportunity to learn Rust language.
+The main goal is to take this opportunity to learn and code in Rust language.
 
 I do not seek to have the most well-written code (since I am learning it) nor the most efficient code either.
 
