@@ -11,5 +11,5 @@ I do not seek to have the most well-written code (since I am learning it) nor th
 ## Days
 
 [--- Day 1: Calorie Counting ---](/d01/) \
-[--- Day 2: Rock Paper Scissors ---](/d02/rock_paper_scissors.md) \
-[--- Day 3: Rucksack Reorganization ---] (/d03/rucksack_reorganization.md)
+[--- Day 2: Rock Paper Scissors ---](/d02/) \
+[--- Day 3: Rucksack Reorganization ---](/d03/)
