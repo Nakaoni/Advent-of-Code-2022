@@ -89,9 +89,53 @@ fn first_half(content: &str) -> usize {
     sum
 }
 
-// fn second_half(content: &str) -> usize {
-//     let lines = content.split('\n');
-// }
+fn second_half(content: &str) -> usize {
+    let lines = content.split('\n');
+    let mut group: Vec<&str> = Vec::new();
+    let mut letters: Vec<char> = Vec::new();
+    let mut first_compartment_letters: HashMap<char, bool> = HashMap::new();
+    let mut common_letters_in_first_and_second: HashMap<char, bool> = HashMap::new();
+    let mut sum: usize = 0;
+
+    for line in lines {
+        group.push(line);
+
+        if group.len() != 3 {
+            continue;
+        }
+
+        let first = group[0];
+        let second = group[1];
+        let third = group[2];
+
+        for letter in first.chars() {
+            first_compartment_letters.insert(letter, true);
+        }
+
+        for letter in second.chars() {
+            if first_compartment_letters.contains_key(&letter) {
+                common_letters_in_first_and_second.insert(letter, true);
+            }
+        }
+
+        for letter in third.chars() {
+            if common_letters_in_first_and_second.contains_key(&letter) {
+                letters.push(letter);
+                break;
+            }
+        }
+
+        first_compartment_letters.clear();
+        common_letters_in_first_and_second.clear();
+        group.clear();
+    }
+
+    for letter in letters {
+        sum = sum + get_letter_value(letter);
+    }
+
+    sum
+}
 
 fn main() {
     const FILE_PATH: &str = "./assets/input.txt";
@@ -99,5 +143,5 @@ fn main() {
     let content = fs::read_to_string(FILE_PATH).expect("Could not open file");
 
     println!("{}", first_half(&content));
-    // println!("{}", second_half(&content));
+    println!("{}", second_half(&content));
 }
