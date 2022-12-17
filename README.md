@@ -13,3 +13,4 @@ I do not seek to have the most well-written code (since I am learning it) nor th
 [--- Day 1: Calorie Counting ---](/d01/) \
 [--- Day 2: Rock Paper Scissors ---](/d02/) \
 [--- Day 3: Rucksack Reorganization ---](/d03/)
+[--- Day 4: Camp Cleanup ---](/d04/)
